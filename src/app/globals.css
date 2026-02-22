@@ -52,23 +52,16 @@
 }
 
 .product-card {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dark .product-card {
-  background: rgba(30, 41, 59, 0.6);
+  background: #1e293b;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(5, 150, 105, 0.2);
-  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.08);
-  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(5, 150, 105, 0.4);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.3);
+  background: #263548;
 }
 
 .gradient-text {

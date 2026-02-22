@@ -103,25 +103,25 @@ export default function ProductsPage() {
     return (
         <>
             {/* Header Section */}
-            <header className="relative pt-40 pb-20 overflow-hidden">
+            <header className="relative pt-40 pb-20 overflow-hidden bg-slate-900">
                 {/* Background Blur Orbs */}
-                <div className="absolute top-0 right-0 -mr-40 -mt-40 w-[800px] h-[800px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute top-0 right-0 -mr-40 -mt-40 w-[800px] h-[800px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 -ml-40 -mb-20 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-100 dark:bg-slate-800 dark:border-slate-700 mb-6 shadow-sm">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800 border border-slate-700 mb-6">
                         <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                        <span className="text-xs font-bold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
+                        <span className="text-xs font-bold uppercase tracking-wide text-emerald-400">
                             Curated Selection
                         </span>
                     </div>
 
-                    <h1 className="font-display font-bold text-5xl md:text-7xl mb-6 text-slate-900 dark:text-white tracking-tight">
+                    <h1 className="font-display font-bold text-5xl md:text-7xl mb-6 text-white tracking-tight">
                         Fuel Your Team With <br />
                         <span className="gradient-text">Premium Choices</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
                         Explore our constantly evolving catalog of fresh meals, healthy
                         snacks, and premium beverages designed to keep your workplace
                         energized.
@@ -130,16 +130,16 @@ export default function ProductsPage() {
             </header>
 
             {/* Products Section */}
-            <section className="pb-32 relative">
+            <section className="pb-32 relative bg-slate-900">
                 <div className="max-w-7xl mx-auto px-6">
                     {/* Category Filters */}
-                    <div className="flex flex-wrap justify-center gap-3 mb-16">
+                    <div className="flex flex-wrap justify-center gap-3 mb-16 pt-12">
                         {categories.map((category) => (
                             <button
                                 key={category.name}
                                 className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all ${category.active
-                                        ? "bg-[#065F46] text-white shadow-lg shadow-emerald-800/20 transform hover:scale-105"
-                                        : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-emerald-500 hover:text-emerald-700"
+                                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-800/30 transform hover:scale-105"
+                                    : "bg-slate-800 border border-slate-600 text-slate-300 hover:border-emerald-500 hover:text-emerald-400"
                                     }`}
                             >
                                 {category.name}
@@ -165,7 +165,7 @@ export default function ProductsPage() {
 
                     {/* Load More Button */}
                     <div className="mt-16 text-center">
-                        <button className="inline-flex items-center gap-2 text-slate-500 hover:text-emerald-700 font-medium transition-colors">
+                        <button className="inline-flex items-center gap-2 text-slate-400 hover:text-emerald-400 font-medium transition-colors">
                             Load more products
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +198,7 @@ export default function ProductsPage() {
                 <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-emerald-900/40 rounded-full blur-[100px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
 
                 <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-                    <div className="glass-panel border-white/10 dark:border-white/5 bg-white/5 dark:bg-white/5 p-12 rounded-3xl backdrop-blur-xl">
+                    <div className="bg-slate-800 border border-slate-700 p-12 rounded-3xl">
                         <h2 className="font-display font-bold text-3xl md:text-5xl text-white mb-6">
                             See something you like?
                         </h2>

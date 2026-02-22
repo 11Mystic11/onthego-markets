@@ -296,7 +296,7 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-emerald-900/40 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2" />
 
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-          <div className="glass-panel border-white/10 dark:border-white/5 bg-white/5 dark:bg-white/5 p-12 rounded-3xl backdrop-blur-xl">
+          <div className="bg-slate-800 border border-slate-700 p-12 rounded-3xl">
             <span className="text-[#F59E0B] font-bold tracking-widest uppercase text-sm mb-4 block">
               Get Started Today
             </span>
@@ -312,7 +312,7 @@ export default function Home() {
               <button className="bg-[#F59E0B] hover:bg-yellow-500 text-white font-display font-bold py-4 px-10 rounded-xl transition-all shadow-lg shadow-yellow-500/20 transform hover:scale-105">
                 Book A Site Audit
               </button>
-              <button className="bg-transparent border border-white/20 hover:bg-white/10 text-white font-display font-medium py-4 px-10 rounded-xl transition-all backdrop-blur-sm">
+              <button className="bg-transparent border-2 border-white hover:bg-white hover:text-slate-900 text-white font-display font-medium py-4 px-10 rounded-xl transition-all">
                 Request Brochure
               </button>
             </div>

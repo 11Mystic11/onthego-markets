@@ -94,14 +94,14 @@ const iconMap = {
 };
 
 const tagColorMap: Record<string, string> = {
-    ORGANIC: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    VEGAN: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    "HIGH PROTEIN": "bg-blue-100 text-blue-800 border-blue-200",
-    GF: "bg-orange-100 text-orange-800 border-orange-200",
-    PROBIOTIC: "bg-purple-100 text-purple-800 border-purple-200",
-    CAFFEINATED: "bg-amber-100 text-amber-800 border-amber-200",
-    "FRESH DAILY": "bg-indigo-100 text-indigo-800 border-indigo-200",
-    "SUGAR FREE": "bg-emerald-100 text-emerald-800 border-emerald-200",
+    ORGANIC: "bg-emerald-700 text-emerald-100 border-emerald-600",
+    VEGAN: "bg-emerald-700 text-emerald-100 border-emerald-600",
+    "HIGH PROTEIN": "bg-blue-700 text-blue-100 border-blue-600",
+    GF: "bg-orange-700 text-orange-100 border-orange-600",
+    PROBIOTIC: "bg-purple-700 text-purple-100 border-purple-600",
+    CAFFEINATED: "bg-amber-700 text-amber-100 border-amber-600",
+    "FRESH DAILY": "bg-indigo-700 text-indigo-100 border-indigo-600",
+    "SUGAR FREE": "bg-teal-700 text-teal-100 border-teal-600",
 };
 
 export default function ProductCard({
@@ -116,7 +116,7 @@ export default function ProductCard({
     return (
         <div className="product-card rounded-3xl p-4 flex flex-col group h-full">
             {/* Image Container */}
-            <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-50 dark:bg-slate-800">
+            <div className="relative aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-700">
                 <Image
                     src={image}
                     alt={title}
@@ -130,7 +130,7 @@ export default function ProductCard({
                         {tags.map((tag) => (
                             <span
                                 key={tag}
-                                className={`text-[10px] font-bold px-2 py-1 rounded-md border backdrop-blur-sm ${tagColorMap[tag] || "bg-slate-100 text-slate-800 border-slate-200"
+                                className={`text-[10px] font-bold px-2 py-1 rounded-md border backdrop-blur-sm ${tagColorMap[tag] || "bg-slate-700 text-slate-100 border-slate-600"
                                     }`}
                             >
                                 {tag}
@@ -143,21 +143,21 @@ export default function ProductCard({
             {/* Content */}
             <div className="px-2 pb-2 flex-grow flex flex-col">
                 <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white group-hover:text-emerald-700 transition-colors">
+                    <h3 className="font-display font-bold text-lg text-white group-hover:text-emerald-400 transition-colors">
                         {title}
                     </h3>
                     {icon && (
-                        <span className="text-slate-300 group-hover:text-emerald-500 transition-colors">
+                        <span className="text-slate-400 group-hover:text-emerald-400 transition-colors">
                             {iconMap[icon]}
                         </span>
                     )}
                 </div>
-                <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 line-clamp-2">
+                <p className="text-sm text-slate-400 mb-4 line-clamp-2">
                     {description}
                 </p>
 
                 {/* Nutrition Info & Add Button */}
-                <div className="mt-auto flex items-center justify-between border-t border-slate-100 dark:border-slate-700 pt-4">
+                <div className="mt-auto flex items-center justify-between border-t border-slate-700 pt-4">
                     <div className="flex flex-col">
                         {nutritionLabel && (
                             <span className="text-xs text-slate-400 uppercase font-semibold">
@@ -165,12 +165,12 @@ export default function ProductCard({
                             </span>
                         )}
                         {nutritionValue && (
-                            <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                            <span className="text-sm font-medium text-slate-200">
                                 {nutritionValue}
                             </span>
                         )}
                     </div>
-                    <button className="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-700 hover:bg-emerald-600 hover:text-white text-slate-600 transition-all flex items-center justify-center">
+                    <button className="w-8 h-8 rounded-full bg-slate-700 hover:bg-emerald-600 hover:text-white text-slate-300 transition-all flex items-center justify-center">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
