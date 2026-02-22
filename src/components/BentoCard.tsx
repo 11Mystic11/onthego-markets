@@ -70,17 +70,17 @@ export default function BentoCard({
     if (variant === "centered") {
         return (
             <div
-                className={`${baseClasses} bg-white dark:bg-slate-800 p-6 border border-slate-100 dark:border-slate-700 flex flex-col items-center justify-center text-center ${className}`}
+                className={`${baseClasses} bg-slate-800 p-6 border border-slate-700 flex flex-col items-center justify-center text-center ${className}`}
             >
                 <div
                     className={`w-16 h-16 rounded-full ${iconBgColor} flex items-center justify-center mb-4`}
                 >
                     <span className="text-2xl">{icon}</span>
                 </div>
-                <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white">
+                <h3 className="font-display font-bold text-lg text-white">
                     {title}
                 </h3>
-                <p className="text-slate-500 dark:text-slate-400 text-xs mt-2">
+                <p className="text-slate-400 text-xs mt-2">
                     {description}
                 </p>
             </div>
@@ -90,7 +90,7 @@ export default function BentoCard({
     if (variant === "wide" && image) {
         return (
             <div
-                className={`${baseClasses} col-span-1 md:col-span-3 lg:col-span-4 row-span-1 bg-white dark:bg-slate-800 p-2 border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row gap-6 ${className}`}
+                className={`${baseClasses} col-span-1 md:col-span-3 lg:col-span-4 row-span-1 bg-slate-800 p-2 border border-slate-700 flex flex-col md:flex-row gap-6 ${className}`}
             >
                 <div className="w-full md:w-1/3 h-48 md:h-full relative overflow-hidden rounded-2xl">
                     <Image
@@ -104,11 +104,11 @@ export default function BentoCard({
                 <div className="flex-1 p-4 md:p-6 flex flex-col justify-center">
                     <div className="flex items-center gap-3 mb-3">
                         <span className="text-[#F59E0B]">{icon}</span>
-                        <h3 className="font-display font-bold text-xl text-slate-900 dark:text-white">
+                        <h3 className="font-display font-bold text-xl text-white">
                             {title}
                         </h3>
                     </div>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6 max-w-2xl">
+                    <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-2xl">
                         {description}
                     </p>
                     {tags.length > 0 && (
@@ -116,7 +116,7 @@ export default function BentoCard({
                             {tags.map((tag) => (
                                 <div
                                     key={tag}
-                                    className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 px-3 py-1.5 rounded-lg"
+                                    className="flex items-center gap-2 text-xs font-semibold text-slate-300 bg-slate-700 px-3 py-1.5 rounded-lg"
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -138,8 +138,8 @@ export default function BentoCard({
                         </div>
                     )}
                 </div>
-                <div className="hidden lg:flex w-1/5 items-center justify-center border-l border-slate-100 dark:border-slate-700">
-                    <button className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-600 flex items-center justify-center hover:bg-[#F59E0B] hover:border-[#F59E0B] hover:text-white transition-colors text-slate-400">
+                <div className="hidden lg:flex w-1/5 items-center justify-center border-l border-slate-700">
+                    <button className="w-12 h-12 rounded-full border border-slate-600 flex items-center justify-center hover:bg-[#F59E0B] hover:border-[#F59E0B] hover:text-white transition-colors text-slate-400">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -163,20 +163,20 @@ export default function BentoCard({
     // Default variant
     return (
         <div
-            className={`${baseClasses} bg-white dark:bg-slate-800 p-8 border border-slate-100 dark:border-slate-700 flex flex-col justify-center ${className}`}
+            className={`${baseClasses} bg-slate-800 p-8 border border-slate-700 flex flex-col justify-center ${className}`}
         >
             <div className="flex items-start justify-between mb-4">
                 <div className={`${iconBgColor} p-3 rounded-xl`}>{icon}</div>
                 {badge && (
-                    <span className="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-full text-xs font-medium text-slate-500 dark:text-slate-300">
+                    <span className="px-3 py-1 bg-slate-700 rounded-full text-xs font-medium text-slate-300">
                         {badge}
                     </span>
                 )}
             </div>
-            <h3 className="font-display font-bold text-xl text-slate-900 dark:text-white mb-2">
+            <h3 className="font-display font-bold text-xl text-white mb-2">
                 {title}
             </h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm">
+            <p className="text-slate-400 text-sm">
                 {description}
             </p>
         </div>

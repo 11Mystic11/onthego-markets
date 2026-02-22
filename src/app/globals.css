@@ -48,7 +48,7 @@
 
 .bento-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4);
 }
 
 .product-card {
